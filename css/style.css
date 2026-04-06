@@ -41,6 +41,15 @@ body {
     z-index: 100;
 }
 
+@media (max-width: 768px) {
+  .header {
+    position: static;
+  }
+  body {
+    padding-top: 0;
+  }
+}
+
 .header .container {
     display: flex;
     justify-content: space-between;
