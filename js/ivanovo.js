@@ -2,7 +2,7 @@
 const services = [
     { 
         id: 1, 
-        name: "Гостиница Центральная", 
+        name: "Гостиница Турист", 
         price: 3500, 
         category: "Отели", 
         rating: 4.5, // Это поле теперь будет игнорироваться, оставлено для обратной совместимости
@@ -10,134 +10,124 @@ const services = [
             { userId: 1, rating: 5, comment: "Отличный отель!" },
             { userId: 2, rating: 4, comment: "Хорошее место для отдыха" }
         ],
-        description: "Комфортабельный отель в центре города с бесплатным Wi-Fi",
-        image: "https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+        description: "Крупный гостиничный комплекс в центре города с удобным доступом к основным достопримечательностям.",
+        image: "images/Turist_Ivanovo.png"
     },
     { 
         id: 2,
-        name: "Ресторан Старый Город", 
+        name: "Шафран", 
         price: 2500, 
         category: "Кафе и рестораны", 
         rating: 4.8,
         reviews: [
             { userId: 1, rating: 5, comment: "Вкусная еда и отличное обслуживание" }
         ],
-        description: "Ресторан русской кухни с уютной атмосферой",
-        image: "https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+        description: "Ресторан в центре города. Восточная + европейская кухня.",
+        image: "images/Shafran_Ivanovo.jpg"
     },
     { 
         id: 3, 
-        name: "Такси Городское", 
-        price: 500, 
+        name: "Такси максим", 
+        price: "Бесценно", 
         category: "Такси", 
-        rating: 4.2,
+        rating: 4.7,
         reviews: [],
-        description: "Круглосуточная служба такси с фиксированными тарифами",
-        image: "https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+        description: "Надежное такси с собственным приложением",
+        image: "images/maksim_Ivanovo.jpg" 
     },
     { 
         id: 4, 
-        name: "Экскурсия по историческому центру", 
-        price: 1200, 
+        name: "«Как крестьянин купцом стал»", 
+        price: 8100, 
         category: "Экскурсии", 
         rating: 4.9,
         reviews: [
             { userId: 3, rating: 5, comment: "Интересный маршрут, отличный гид" },
             { userId: 4, rating: 5, comment: "Познавательно и увлекательно" }
         ],
-        description: "2-часовая пешая экскурсия по главным достопримечательностям",
-        image: "https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+        description: "Обзорная экскурсия по Иваново. Музей ситца + мастер-классы. Поездка в Шую + музей мыла.",
+        image: "images/Kupec_Ivanovo.jpg"
     },
     { 
         id: 5, 
-        name: "Мини-отель Уют", 
+        name: "Отель Союз", 
         price: 2800, 
         category: "Отели", 
         rating: 4.1,
         reviews: [],
-        description: "Небольшой семейный отель с домашней атмосферой",
-        image: "https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+        description: "Современный отель с комфортными номерами и развитой инфраструктурой.",
+        image: "images/soyuz_Ivanovo.jpg"
     },
     { 
         id: 6, 
-        name: "Кафе Кофейня", 
+        name: "Seven", 
         price: 800, 
         category: "Кафе и рестораны", 
         rating: 4.3,
         reviews: [],
-        description: "Уютное кафе с широким выбором кофе и десертов", 
-        image: "https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+        description: "Кафе с выпечкой и нормальными ценами. Есть мероприятия. Отлично подходит молодежи и школьников.", 
+        image: "images/Seven_Ivanovo.jpg"
     },
     { 
         id: 7, 
-        name: "Такси Премиум", 
-        price: 800, 
+        name: "Такси 42", 
+        price: 120, 
         category: "Такси", 
         rating: 4.7,
         reviews: [],
-        description: "Премиум класс такси с новыми автомобилями",
-        image: "https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" 
+        description: "Круглосуточное, с трансферами и детскими креслами.",
+        image: "images/taxi42_Ivanovo.png" 
     },
     { 
         id: 8, 
-        name: "Автобусная экскурсия", 
+        name: "«В гости к Бабе Яге»", 
         price: 1800, 
         category: "Экскурсии", 
         rating: 4.4,
         reviews: [],
-        description: "3-часовая автобусная экскурсия по городу и окрестностям", 
-        image: "https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+        description: "Сказочная экскурсия. Подходит для детей и школьников. Тематика русских сказок.", 
+        image: "images/baba-ya_Ivanovo.jpg"
     },
     { 
         id: 9, 
-        name: "Хостел Путешественник", 
+        name: "Шереметев Парк Отель", 
         price: 1200, 
         category: "Отели", 
         rating: 3.9,
         reviews: [],
-        description: "Бюджетный хостел для путешественников", 
-        image: "https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+        description: "Комфортный парк-отель для спокойного отдыха и размещения туристов.", 
+        image: "images/sher_Ivanovo.jpg"
     },
     { 
         id: 10, 
-        name: "Ресторан Итальянская кухня", 
+        name: "Кухня на Углях", 
         price: 3200, 
         category: "Кафе и рестораны", 
         rating: 4.6,
         reviews: [],
-        description: "Аутентичная итальянская кухня от шеф-повара из Рима",
-        image: "https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" 
+        description: "Кафе с шашлыками и мясом. Есть кавказская кухня. Подходит для «сытно и недорого».",
+        image: "images/NaUglax_Ivanovo.jpg" 
     },
     { 
         id: 11, 
-        name: "Такси Эконом", 
-        price: 300, 
+        name: "ООО «Отличное такси»", 
+        price: 120, 
         category: "Такси", 
         rating: 3.8,
         reviews: [],
-        description: "Самая экономичная служба такси в городе", 
-        image: "https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+        description: "Частная компания (ООО), работает с 2009 года.", 
+        image: "images/taxiIv_Ivanovo.png"
     },
     { 
         id: 12, 
-        name: "Ночная экскурсия", 
+        name: "«Путешествие по Волжским городам»", 
         price: 1500, 
         category: "Экскурсии", 
         rating: 4.7,
         reviews: [],
-        description: "Эксклюзивная вечерняя экскурсия по освещенным достопримечательностям",
-        image: "https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+        description: "3 дня: Иваново + Плёс + Суздаль + Кострома",
+        image: "images/Volzhsk_Ivanovo.jpg"
     },
-    { 
-        id: 13, 
-        name: "такси максим", 
-        price: "Бесценно", 
-        category: "Такси", 
-        rating: 4.7,
-        reviews: [],
-        description: "Эксклюзивная таксишка от максима",
-        image: "https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" 
-    }
 ];
 
 class SearchSystem {
