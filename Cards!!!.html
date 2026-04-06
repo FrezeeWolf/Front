@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Отели - Карточки</title>
+    <link rel="stylesheet" href="css/cards.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Популярные отели</h1>
+        <div class="cards-container">
+            <!-- Карточки отелей -->
+            <div class="card" data-id="1">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYWpGbGlMjsOrzOjyAC3NpBuAO5WzDnsFogg&s" alt="Гранд Отель Европа" class="card-img">
+                <div class="card-title">Гранд Отель Европа</div>
+                <div class="card-content" hidden>
+                    <div class="stars">★★★★★</div>
+                    <p class="description">Роскошный отель в центре города с видом на главные достопримечательности. К вашим услугам спа-центр, бассейн и ресторан высокой кухни.</p>
+                    <div class="price">15000 руб./ночь</div>
+                    <button class="details-btn">Подробнее</button>
+                </div>
+            </div>
+
+            <div class="card" data-id="2">
+                <img src="https://source.unsplash.com/random/600x400/?hotel,2" alt="Парк Инн" class="card-img">
+                <div class="card-title">Парк Инн</div>
+                <div class="card-content" hidden>
+                    <div class="stars">★★★★☆</div>
+                    <p class="description">Современный отель с комфортабельными номерами и отличным сервисом. Идеально подходит для деловых поездок и семейного отдыха.</p>
+                    <div class="price">8500 руб./ночь</div>
+                    <button class="details-btn">Подробнее</button>
+                </div>
+            </div>
+
+            <div class="card" data-id="3">
+                <img src="https://source.unsplash.com/random/600x400/?hotel,3" alt="Азимут Отель" class="card-img">
+                <div class="card-title">Азимут Отель</div>
+                <div class="card-content" hidden>
+                    <div class="stars">★★★☆☆</div>
+                    <p class="description">Уютный отель с домашней атмосферой. Расположен в тихом районе, но в шаговой доступности от центра.</p>
+                    <div class="price">5500 руб./ночь</div>
+                    <button class="details-btn">Подробнее</button>
+                </div>
+            </div>
+
+            <div class="card" data-id="4">
+                <img src="https://source.unsplash.com/random/600x400/?hotel,4" alt="Метрополь" class="card-img">
+                <div class="card-title">Метрополь</div>
+                <div class="card-content" hidden>
+                    <div class="stars">★★★★★</div>
+                    <p class="description">Исторический отель с богатой историей. Интерьеры сохранили дух прошлых веков, сочетая его с современными удобствами.</p>
+                    <div class="price">22000 руб./ночь</div>
+                    <button class="details-btn">Подробнее</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="overlay" id="overlay"></div>
+
+    <script src="js/cards.js"></script>
+</body>
+</html>

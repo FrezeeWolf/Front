@@ -1,0 +1,123 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    width: 320px;
+    height: 380px;
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    z-index: 1;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.card.active {
+    transform: scale(1.05);
+    z-index: 100;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.card-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: opacity 0.3s ease;
+}
+
+.card.active .card-img {
+    opacity: 0;
+}
+
+.card-title {
+    padding: 15px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+}
+
+.card-content {
+    padding: 15px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.card.active .card-content {
+    opacity: 1;
+}
+
+.stars {
+    color: #FFD700;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.description {
+    margin-bottom: 15px;
+    color: #666;
+    line-height: 1.5;
+    flex-grow: 1;
+}
+
+.price {
+    font-size: 20px;
+    font-weight: bold;
+    color: #2e8b57;
+    margin-bottom: 15px;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: none;
+    z-index: 10;
+}
+
+@media (max-width: 768px) {
+    .cards-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .card.active {
+        transform: scale(1.02);
+    }
+}

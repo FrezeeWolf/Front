@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grand Hotel — ALTourism</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/hotel.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <a href="index.html" class="logo">ALTourism</a>
+            <nav>
+                <a href="citys.html">Города</a>
+                <a href="add-city.html">Предложить город</a>
+                <!-- <a href="my-bookings.html">Мои бронирования</a> -->
+                <a href="auth.html" class="btn btn-outline">Выйти</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="hotel-details-container">
+        <div class="container">
+            <section class="hotel-main-info">
+                <h1>Grand Hotel</h1>
+                <div class="hotel-meta">
+                    <span class="rating">★★★★☆ (8.5/10)</span>
+                    <span class="location">Москва, ул. Тверская, 10</span>
+                    <a href="#" class="show-on-map">Показать на карте</a>
+                </div>
+
+                <div class="gallery">
+                    <div class="main-image">
+                        <img src="../images/hotel1-large.jpg" alt="Grand Hotel">
+                    </div>
+                    <div class="thumbnails">
+                        <img src="../images/hotel1-thumb1.jpg" alt="Номер">
+                        <img src="../images/hotel1-thumb2.jpg" alt="Бассейн">
+                        <img src="../images/hotel1-thumb3.jpg" alt="Ресторан">
+                        <img src="../images/hotel1-thumb4.jpg" alt="Лобби">
+                    </div>
+                </div>
+
+                <div class="hotel-description">
+                    <h2>Описание отеля</h2>
+                    <p>Роскошный 5-звездочный отель в самом центре Москвы с видом на Кремль. Grand Hotel предлагает элегантные номера с современными удобствами, бесплатным Wi-Fi и панорамными видами на город.</p>
+                    <p>К вашим услугам спа-центр с крытым бассейном, тренажерным залом и полным спектром оздоровительных процедур. В отеле работают 3 ресторана, предлагающие блюда международной и русской кухни.</p>
+                </div>
+
+                <div class="amenities">
+                    <h2>Удобства</h2>
+                    <div class="amenities-grid">
+                        <div class="amenity-item">
+                            <span class="icon">✓</span>
+                            <span>Бесплатный Wi-Fi</span>
+                        </div>
+                        <div class="amenity-item">
+                            <span class="icon">✓</span>
+                            <span>Крытый бассейн</span>
+                        </div>
+                        <div class="amenity-item">
+                            <span class="icon">✓</span>
+                            <span>SPA-центр</span>
+                        </div>
+                        <div class="amenity-item">
+                            <span class="icon">✓</span>
+                            <span>Фитнес-зал</span>
+                        </div>
+                        <div class="amenity-item">
+                            <span class="icon">✓</span>
+                            <span>Ресторан</span>
+                        </div>
+                        <div class="amenity-item">
+                            <span class="icon">✓</span>
+                            <span>Кондиционер</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <aside class="booking-sidebar">
+                <div class="booking-card">
+                    <h3>Забронировать номер</h3>
+                    <p class="price">5 000 ₽ <small>/ ночь</small></p>
+                    
+                    <form class="booking-form">
+                        <div class="form-group">
+                            <label>Даты проживания</label>
+                            <input type="text" id="bookingDates" placeholder="Выберите даты">
+                        </div>
+                        <div class="form-group">
+                            <label>Гости</label>
+                            <select>
+                                <option>1 взрослый</option>
+                                <option>2 взрослых</option>
+                                <option>2 взрослых + 1 ребенок</option>
+                                <option>2 взрослых + 2 ребенка</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Тип номера</label>
+                            <select>
+                                <option>Стандартный двухместный</option>
+                                <option>Люкс с видом на город</option>
+                                <option>Президентский люкс</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn btn-accent">Забронировать</button>
+                    </form>
+                </div>
+
+                <div class="contact-card">
+                    <h3>Контакты</h3>
+                    <p><strong>Адрес:</strong> ул. Тверская, 10, Москва</p>
+                    <p><strong>Телефон:</strong> +7 (495) 123-45-67</p>
+                    <p><strong>Email:</strong> info@grandhotel.ru</p>
+                </div>
+            </aside>
+        </div>
+
+        <section class="reviews-section">
+            <div class="container">
+                <h2>Отзывы гостей</h2>
+                
+                <div class="reviews-list">
+                    <div class="review-card">
+                        <div class="review-header">
+                            <div class="user-info">
+                                <span class="user-name">Анна К.</span>
+                                <span class="review-date">15.09.2023</span>
+                            </div>
+                            <div class="rating">★★★★★</div>
+                        </div>
+                        <div class="review-content">
+                            <p>Отличный отель! Чистые номера, вежливый персонал. Особенно понравился вид из окна на Красную площадь. Завтраки очень вкусные и разнообразные. Обязательно вернемся снова!</p>
+                        </div>
+                    </div>
+
+                    <div class="review-card">
+                        <div class="review-header">
+                            <div class="user-info">
+                                <span class="user-name">Иван П.</span>
+                                <span class="review-date">03.08.2023</span>
+                            </div>
+                            <div class="rating">★★★★☆</div>
+                        </div>
+                        <div class="review-content">
+                            <p>Хороший отель, но дороговато. Персонал приветливый, номера чистые. Не понравилось, что бассейн был на ремонте, хотя об этом не предупредили заранее.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="add-review">
+                    <h3>Оставить отзыв</h3>
+                    <form id="reviewForm">
+                        <div class="form-group">
+                            <label>Ваше имя</label>
+                            <input type="text" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Оценка</label>
+                            <select required>
+                                <option value="">Выберите оценку</option>
+                                <option value="5">★★★★★ Отлично</option>
+                                <option value="4">★★★★☆ Очень хорошо</option>
+                                <option value="3">★★★☆☆ Нормально</option>
+                                <option value="2">★★☆☆☆ Плохо</option>
+                                <option value="1">★☆☆☆☆ Ужасно</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Ваш отзыв</label>
+                            <textarea rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Отправить отзыв</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-links">
+                <a href="index.html">Главная</a>
+                <a href="citys.html">Города</a>
+                <a href="add-city.html">Предложить город</a>
+                <a href="auth.html">Войти</a>
+                <a href="#">Контакты</a>
+            </div>
+            <p>© 2025 ALTourism. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/ru.js"></script>
+    <script src="js/hotel.js"></script>
+</body>
+</html>

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Поиск отелей — ALTourism</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/citys.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <a href="index.html" class="logo">ALTourism</a>
+            <nav>
+                <a href="citys.html">Города</a>
+                <a href="add-city.html">Предложить город</a>
+                <!-- <a href="my-bookings.html">Мои бронирования</a> -->
+                <a href="auth.html" class="btn btn-outline">Выйти</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="search-section">
+        <div class="container">
+            <div class="search-box">
+                <div class="search-tabs">
+                    <button class="active">Города</button>
+                    <button>Авиабилеты</button>
+                    <button>Аренда авто</button>
+                </div>
+                <form class="search-form">
+                    <div class="form-group">
+                        <label for="destination">Куда</label>
+                        <input type="text" id="destination" placeholder="Город, отель или достопримечательность">
+                    </div>
+                    <div class="form-group">
+                        <label for="dates">Даты</label>
+                        <input type="text" id="dates" placeholder="Выберите даты">
+                    </div>
+                    <div class="form-group">
+                        <label for="guests">Гости</label>
+                        <input type="text" id="guests" placeholder="2 взрослых, 1 номер">
+                    </div>
+                    <button type="submit" class="btn btn-accent">Найти</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <section class="hotel-results">
+        <div class="container">
+            <aside class="filters">
+                <h3>Фильтры</h3>
+                <div class="filter-group">
+                    <h4>Цена за ночь</h4>
+                    <input type="range" min="500" max="20000" step="500" value="5000" id="priceRange">
+                    <div class="price-values">
+                        <span>500 ₽</span>
+                        <span id="currentPrice">5000 ₽</span>
+                        <span>20000 ₽</span>
+                    </div>
+                </div>
+                <div class="filter-group">
+                    <h4>Рейтинг</h4>
+                    <select id="ratingFilter">
+                        <option value="0">Любой</option>
+                        <option value="7">7+</option>
+                        <option value="8">8+</option>
+                        <option value="9">9+</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <h4>Удобства</h4>
+                    <label><input type="checkbox" checked> Wi-Fi</label>
+                    <label><input type="checkbox" checked> Бассейн</label>
+                    <label><input type="checkbox"> Парковка</label>
+                    <label><input type="checkbox"> Кондиционер</label>
+                    <label><input type="checkbox"> Завтрак</label>
+                </div>
+                <div class="filter-group">
+                    <h4>Тип жилья</h4>
+                    <label><input type="checkbox" checked> Отель</label>
+                    <label><input type="checkbox"> Апартаменты</label>
+                    <label><input type="checkbox"> Вилла</label>
+                    <label><input type="checkbox"> Хостел</label>
+                </div>
+            </aside>
+
+            <main class="hotel-list">
+                <div class="hotel-card">
+                    <img src="../images/hotel1.jpg" alt="Grand Hotel">
+                    <div class="hotel-info">
+                        <h3>Grand Hotel</h3>
+                        <p class="location">Москва, 1 км от центра</p>
+                        <p class="description">Роскошный отель в центре города с видом на Кремль. В вашем распоряжении спа-центр, ресторан и бесплатный Wi-Fi.</p>
+                        <div class="amenities">
+                            <span>Wi-Fi</span>
+                            <span>Бассейн</span>
+                            <span>Ресторан</span>
+                        </div>
+                        <div class="rating">
+                            <span class="stars">★★★★☆</span>
+                            <span class="score">8.5/10</span>
+                        </div>
+                    </div>
+                    <div class="hotel-price">
+                        <p class="price">5 000 ₽ <small>/ ночь</small></p>
+                        <a href="hotel-details.html" class="btn btn-primary">Подробнее</a>
+                    </div>
+                </div>
+
+                <div class="hotel-card">
+                    <img src="../images/hotel2.jpg" alt="Sunny Resort">
+                    <div class="hotel-info">
+                        <h3>Sunny Resort</h3>
+                        <p class="location">Сочи, 500 м от пляжа</p>
+                        <p class="description">Курортный комплекс с собственным пляжем, несколькими бассейнами и спа-центром.</p>
+                        <div class="amenities">
+                            <span>Wi-Fi</span>
+                            <span>Бассейн</span>
+                            <span>Пляж</span>
+                            <span>SPA</span>
+                        </div>
+                        <div class="rating">
+                            <span class="stars">★★★★★</span>
+                            <span class="score">9.2/10</span>
+                        </div>
+                    </div>
+                    <div class="hotel-price">
+                        <p class="price">7 500 ₽ <small>/ ночь</small></p>
+                        <a href="hotel-details.html" class="btn btn-primary">Подробнее</a>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-links">
+                <a href="index.html">Главная</a>
+                <a href="citys.html">Города</a>
+                <a href="add-city.html">Предложить город</a>
+                <a href="auth.html">Выйти</a>
+                <a href="#">Контакты</a>
+            </div>
+            <p>© 2025 ALTourism. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <script src="js/citys.js"></script>
+</body>
+</html>

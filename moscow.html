@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Поиск услуг — ALTourism</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/filters.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <a href="index.html" class="logo">ALTourism</a>
+            <nav>
+                <a href="citys.html">Города</a>
+                <a href="add-city.html">Предложить город</a>
+                <a href="auth.html" class="btn btn-outline">Выйти</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <h1>Поиск услуг</h1>
+        
+        <div class="search-container">
+            <input type="text" id="search-input" placeholder="Введите название услуги...">
+        </div>
+        
+        <div class="main-content">
+            <div class="filters">
+                <div class="filter-group">
+                    <h3>Категории</h3>
+                    <div class="filter-option">
+                        <input type="checkbox" id="cat-hotels" name="category" value="Отели">
+                        <label for="cat-hotels">Отели</label>
+                    </div>
+                    <div class="filter-option">
+                        <input type="checkbox" id="cat-restaurants" name="category" value="Кафе и рестораны">
+                        <label for="cat-restaurants">Кафе и рестораны</label>
+                    </div>
+                    <div class="filter-option">
+                        <input type="checkbox" id="cat-taxi" name="category" value="Такси">
+                        <label for="cat-taxi">Такси</label>
+                    </div>
+                    <div class="filter-option">
+                        <input type="checkbox" id="cat-excursions" name="category" value="Экскурсии">
+                        <label for="cat-excursions">Экскурсии</label>
+                    </div>
+                </div>
+                
+                <div class="filter-group">
+                    <h3>Цена</h3>
+                    <div class="filter-option">
+                        <label for="price-min">От:</label>
+                        <input type="number" id="price-min" name="price_min" min="0" placeholder="0">
+                    </div>
+                    <div class="filter-option">
+                        <label for="price-max">До:</label>
+                        <input type="number" id="price-max" name="price_max" min="0" placeholder="10000">
+                    </div>
+                </div>
+                
+                <div class="filter-group">
+                    <h3>Рейтинг</h3>
+                    <div class="filter-option">
+                        <input type="radio" id="rating-any" name="rating" value="" checked>
+                        <label for="rating-any">Любой</label>
+                    </div>
+                    <div class="filter-option">
+                        <input type="radio" id="rating-4" name="rating" value="4">
+                        <label for="rating-4">4+</label>
+                    </div>
+                    <div class="filter-option">
+                        <input type="radio" id="rating-3" name="rating" value="3">
+                        <label for="rating-3">3+</label>
+                    </div>
+                </div>
+                
+                <button class="reset-filters" id="reset-filters">Сбросить фильтры</button>
+                
+                <div class="city-list">
+                    <div class="add-service-container">
+                        <button id="add-service-btn" class="btn btn-accent">Добавить услугу</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="results">
+                <div class="sort-controls">
+                    <label for="sort-select">Сортировка:</label>
+                    <select id="sort-select">
+                        <option value="default">По умолчанию</option>
+                        <option value="price_asc">Цена (по возрастанию)</option>
+                        <option value="price_desc">Цена (по убыванию)</option>
+                        <option value="rating_desc">Высокий рейтинг</option>
+                    </select>
+                </div>
+                
+                <div class="result-count">Найдено услуг: <span id="total-count">0</span></div>
+                
+                <div class="loading">Загрузка...</div>
+                <div class="no-results">Услуги не найдены. Попробуйте изменить параметры поиска.</div>
+                
+                <div id="results-container" class="results-grid"></div>
+                
+                <div class="pagination" id="pagination"></div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-links">
+                <a href="index.html">Главная</a>
+                <a href="add-city.html">Предложить город</a>
+                <a href="auth.html">Выйти</a>
+                <a href="#">Контакты</a>
+            </div>
+            <p>© 2025 ALTourism. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <!-- Модальное окно для добавления услуги -->
+    <div id="add-service-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Добавить новую услугу</h2>
+            <form id="service-form">
+                <div class="form-group">
+                    <label for="service-name">Название услуги:</label>
+                    <input type="text" id="service-name" required>
+                </div>
+                <div class="form-group">
+                    <label for="service-category">Категория:</label>
+                    <select id="service-category" required>
+                        <option value="Отели">Отели</option>
+                        <option value="Кафе и рестораны">Кафе и рестораны</option>
+                        <option value="Такси">Такси</option>
+                        <option value="Экскурсии">Экскурсии</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="service-price">Цена (руб):</label>
+                    <input type="number" id="service-price" required min="0">
+                </div>
+                <div class="form-group">
+                    <label for="service-rating">Рейтинг (1-5):</label>
+                    <input type="number" id="service-rating" required min="1" max="5" step="0.1">
+                </div>
+                <div class="form-group">
+                    <label for="service-description">Описание:</label>
+                    <textarea id="service-description" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="service-image">URL изображения:</label>
+                    <input type="text" id="service-image" placeholder="https://example.com/image.jpg">
+                </div>
+                <button type="submit" class="btn btn-accent">Добавить услугу</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="js/moscow.js"></script>
+</body>
+</html>

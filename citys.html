@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Поиск города — ALTourism</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/cards.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <a href="index.html" class="logo">ALTourism</a>
+            <nav>
+                <a href="citys.html">Города</a>
+                <a href="add-city.html">Предложить город</a>
+                <!-- <a href="my-bookings.html">Мои бронирования</a> -->
+                <a href="auth.html" class="btn btn-outline">Выйти</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="City-list">
+        <div class="container">
+            <h1>Выберите желаемый город</h1>
+            <div class="cards-container">
+                <!-- Карточки городов -->
+                <div class="card" data-id="1">
+                    <img src="https://livingheritage.ru/photos/brand/700.jpg" alt="Город Иваново" class="card-img">
+                    <div class="card-title">Иваново</div>
+                    <div class="card-content" hidden>
+                        <p class="description">Город Иваново – самый молодой город Золотого кольца, расположенный на реке Уводь. Став крупнейшим центром текстильного производства, он из-за численного преимущества ткачих получил прозвище города «невест». В 20–30 гг.</p>
+                        <a href="ivanovo.html" class="btn btn-accent">Подробнее </a>
+                    </div>
+                </div>
+    
+                <div class="card" data-id="2">
+                    <img src="https://encrypted-tbn2.gstatic.com/licensed-image?q=tbn:ANd9GcQSnwLLkckt-jn0b2B-YxIuG8RnxM4b7aENcIYGDZxe6-ht6Ga2XHV7_NXP-ow2AYL-zxguF62y4soU8K6XjjW4rqo-ys9cssOl08K8sA" alt="Москва" class="card-img">
+                    <div class="card-title">Москва</div>
+                    <div class="card-content" hidden>
+                        <p class="description">Москва — самый главный город нашей страны. Являясь столицей российской Федерации, Москва крупнейший город по численности населения. Расположен город на реке Москве. На карте столицу можно найти в центре Восточно-Европейской равнины.</p>
+                        <a href="moscow.html" class="btn btn-accent">Подробнее </a>
+                    </div>
+                </div>
+    
+                <div class="card" data-id="3">
+                    <img src="https://encrypted-tbn1.gstatic.com/licensed-image?q=tbn:ANd9GcSefXnouBJNxoDB8JVS46og5qJ0eRNXeVRusJb_mZii881kum1L_NGBRa-sZ8nnyjI4n8_Oj3SlVdQ7zEv36m_hyTdmPRFoHRZK-NeG_g" alt="Санкт-Петербург" class="card-img">
+                    <div class="card-title">Санкт-Петербург</div>
+                    <div class="card-content" hidden>
+                        <p class="description">Санкт-Петербург был основан в 1703 году первым российским императором Петром I. Этот город самый северный из крупных мегаполисов мира, его иногда называют «Город белых ночей».</p>
+                        <a href="spb.html" class="btn btn-accent">Подробнее </a>
+                    </div>
+                </div>
+    
+                <div class="card" data-id="4">
+                    <img src="https://img.geliophoto.com/rostovvelikiy/00_rostovvelikiy.jpg" alt="Ростов Великий" class="card-img">
+                    <div class="card-title">Ростов Великий</div>
+                    <div class="card-content" hidden>
+                        <p class="description">Сегодня его называют колыбелью исконно русской архитектуры, православной столицей и жемчужиной городов Золотого кольца России. На Ростовской земле сохранились тысячелетние полноводные озера, березовые рощи и ценнейшие памятники истории и культуры.</p>
+                        <a href="rostov.html" class="btn btn-accent">Подробнее </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <div class="overlay" id="overlay"></div>
+        
+        
+    </main>
+ 
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-links">
+                <a href="index.html">Главная</a>
+                <a href="add-city.html">Предложить город</a>
+                <a href="auth.html">Выйти</a>
+                <a href="#">Контакты</a>
+            </div>
+            <p>© 2025 ALTourism. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <script src="js/cards.js"></script>
+
+</body>
+</html>
