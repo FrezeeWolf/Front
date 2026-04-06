@@ -9,6 +9,21 @@ document.addEventListener('DOMContentLoaded', function() {
     // Пользовательские данные (временное хранилище)
     const users = JSON.parse(localStorage.getItem('bookingSiteUsers')) || [];
     
+    // Костыль базового пользователя
+    const defaultUser = {
+        name: "Admin",
+        email: "admin@gmail.com",
+        phone: "+79999999999",
+        password: "12345678"
+    };
+
+    const userExists = users.some(u => u.email === defaultUser.email);
+
+    if (!userExists) {
+        users.push(defaultUser);
+        localStorage.setItem('bookingSiteUsers', JSON.stringify(users));
+    }
+
     // Переключение между вкладками
     tabs.forEach(tab => {
         tab.addEventListener('click', function() {
