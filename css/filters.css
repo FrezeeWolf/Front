@@ -342,4 +342,16 @@ h1 {
       width: 14px;
       height: 14px;
   }
+  
+  .filters {
+    width: 100%;
+  }
+  
+  .main-content {
+    flex-direction: column;
+  }
+
+  .results-grid {
+    grid-template-columns: 1fr;
+  }
 }
