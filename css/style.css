@@ -63,11 +63,15 @@ body {
     }
 } */
 
-
-
 .header .container {
     display: flex;
     justify-content: space-between;
+}
+
+.auth-page .header .container {
+    flex-direction: column;
+    align-items: center;
+
 }
 
 .logo {
