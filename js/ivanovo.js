@@ -128,6 +128,16 @@ const services = [
         description: "3 дня: Иваново + Плёс + Суздаль + Кострома",
         image: "images/Volzhsk_Ivanovo.jpg"
     },
+    {
+        id: 13,
+        name: "Ивановский историко-краеведческий музей Д. Г. Бурылина",
+        price: 300,
+        category: "Экскурсии",
+        raiting: 4.6,
+        reviews: [],
+        description: "Крупнейшее музейное собрание Ивановской области, насчитывающее более 780 тысяч экспонатов",
+        image: "images/Ivanovo_Buril.jpeg"
+    }
 ];
 
 class SearchSystem {
